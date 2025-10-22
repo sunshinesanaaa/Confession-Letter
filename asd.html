@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A Special Confession</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+  
+  body {
+    background: linear-gradient(135deg, #f9d5e5, #fbc1cc);
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5a1e3f;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 1.5em;
+    max-width: 600px;
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    animation-delay: 1s;
+  }
+
+  button {
+    background-color: #b83260;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(184, 50, 96, 0.5);
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+  }
+
+  button:hover {
+    background-color: #7a2141;
+  }
+
+  #secretMessage {
+    margin-top: 30px;
+    font-size: 1.6em;
+    color: #a72855;
+    opacity: 0;
+    max-width: 600px;
+    transition: opacity 1.5s ease;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1>Hey You! 💖</h1>
+<p>I’ve been wanting to tell you something special for a while now...</p>
+
+<button id="revealBtn">Show My Confession</button>
+
+<div id="secretMessage"></div>
+
+<script>
+  const btn = document.getElementById('revealBtn');
+  const secret = document.getElementById('secretMessage');
+
+  btn.addEventListener('click', () => {
+    secret.textContent = "Every moment we’ve shared makes my heart smile. I admire your kindness, your laughter, and everything that makes you *you*. I’ve realized that what I feel goes beyond friendship — I like you, truly and deeply. I hope this brings a little sunshine to your day, just like you do to mine. 💕";
+    secret.style.opacity = '1';
+    btn.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>
